@@ -131,6 +131,7 @@
     height: 50vh;
     margin-bottom: 5%;
     position: relative;
+    border: 1px solid black;
 }
 
 .offer-card .img-container {
