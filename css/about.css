@@ -1,0 +1,98 @@
+.big-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.logo h1, .title h1 {
+    text-align: center;
+    color: var(--green);
+    height: 7vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7rem;
+}
+
+.title h1 {
+    font: var(--logo-font);
+    text-shadow: 0px 2px 0 #BFBDBA;
+}
+
+.pixelize-description {
+    display: grid;
+    box-sizing: border-box;
+    text-align: center;
+    align-items: center;
+    position: relative;
+}
+
+.pixelize-description p {
+    width: 93%;
+    margin: 3% auto;
+    box-sizing: border-box;
+}
+
+.slider {
+    width: 90%;
+    height: 30vh;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.slides {
+    width: 300%;
+    height: 100%;
+    display: flex;
+    animation-name: autoslide;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+.img-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.img-container img {
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes autoslide{
+    0% {transform: translateX(0);}
+    25% {transform: translateX(-33.33%);}
+    50% {transform: translateX(-66.66%);}
+    75% {transform: translateX(-33.33%);}
+    100% {transform: translateX(0);}
+}
+
+@media only screen and (min-width: 650px) {
+
+    .logo {
+        display: none;
+    }
+
+    .pixelize-description {
+        display: block;
+        padding: 8%;
+    }
+
+    .pixelize-description p {
+        width: 100%;
+        text-align: left;
+    }
+
+    .slider {
+        float: right;
+        width: 50%;
+        margin-left: 2%;
+        margin-bottom: 2%;
+        margin-top: 2%;
+    }
+
+}

@@ -1,0 +1,360 @@
+
+/*----------------------*/
+/*Landing page section 1*/
+/*----------------------*/
+
+#splash-contact {
+    display: none;
+}
+
+#landing {
+    position: relative;
+    height: 91vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#landing .logo {
+    display: flex;
+    color: var(--green);
+    margin: 0 auto;
+    flex: 0 0 10%;
+    align-items: center;
+    width: fit-content;
+}
+
+#landing .logo h1 {
+    font-size: 1.7rem;
+    padding: 0;
+    margin: 0;
+}
+
+#landing .img-container {
+    width: 90%;
+    flex: 0 0 75%;
+    margin: auto;
+    overflow: hidden;
+    background-color: green;
+    position: relative;
+    box-shadow: 0px 3px 0 #BFBDBA;
+}
+
+#landing .img-container img{
+    position: absolute;
+    width: 150%;
+    height: auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#landing .paper {
+    position: absolute;
+}
+
+#splash-line {
+    width: 60%;
+    top: 11%;
+    right: 2%;
+    padding: 2%;
+    z-index: 2;
+}
+
+#splash-line p {
+    display: inline;
+    font-size: 1.2rem;
+}
+
+#contact {
+    width: 90%;
+    height: 10%;
+    left: 50%;
+    top: 90%;
+    transform: translate(-50%, -50%);
+    padding: 1%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+#contact p, #splash-contact p  {
+    margin: 0;
+}
+
+#contact .contact-wrapper {
+    grid-column: 2;
+    align-self: end;
+    justify-self: end;
+    padding: 1%;
+}
+
+.contact-wrapper a {
+    text-decoration: none;
+    font: var(--bold-body-font);
+    color: var(--dark);
+    animation-name: contact-m;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.contact-wrapper:hover {
+    background-color: var(--dark);
+    a {
+        color: var(--white);
+        font-size: 1.3rem;
+        animation-name: contact-m;
+        animation-iteration-count: unset;
+    }
+}
+
+
+/*----------------------*/
+    /*Offers section*/
+/*----------------------*/
+
+
+.offers {
+    width: 100%;
+}
+
+.offers-text h2, .disclaimer{
+    margin: 0;
+    padding: 2%;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.offer-card {
+    margin: 0 auto;
+    width: 70%;
+    height: 50vh;
+    margin-bottom: 5%;
+    position: relative;
+}
+
+.offer-card .img-container {
+    width: 90%;
+    height: 90%;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+
+.offer-card h2 {
+    font-size: 1.3rem;
+}
+
+.card-title-left, .card-desc-right, .card-title-right, .card-desc-left {
+    position: absolute;
+    margin: 0;
+}
+
+.card-title-left, .card-title-right {
+    width: 50%;
+    top: 1%;
+    z-index: 1;
+    background-color: var(--green);
+    color: var(--white);
+    text-align: center;
+}
+
+.card-title-left {
+    left: 1%;
+}
+
+.card-title-right {
+    right: 1%;
+}
+
+.card-title-left h2, .card-title-right h2 {
+    border: 2px solid var(--white);
+    font-size: 0.8rem;
+    padding: 2%;
+    margin: 4%;
+}
+
+.card-desc-right, .card-desc-left {
+    bottom: 1%;
+    padding: 2%;
+    width: 80%;
+    background-color: var(--paper);
+    border: 2px solid var(--dark);
+}
+
+.card-desc-right {
+    right: 1%;
+}
+
+.card-desc-left {
+    left: 1%;
+}
+
+.offer-card .img-container img {
+    width: 120%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes contact-m {
+    0% {font-size: 1.2rem;}
+    50% {font-size: 1.3rem;}
+    100% {font-size: 1.2rem;}
+}
+
+.disclaimer h2 {
+    font-size: 1.2rem;
+}
+
+@media only screen and (min-width: 650px) {
+
+    /*----------------------*/
+    /*Landing page section 1*/
+    /*----------------------*/
+
+    #splash-line {
+        display: none;
+    }
+
+    #landing .logo {
+        display: none;
+    }
+
+    #landing .img-container {
+        width: 90%;
+        flex: 0 0 90%;
+    }
+
+    #contact {
+        display: none;
+    }
+
+    #splash-contact {
+        width: 90%;
+        height: 15%;
+        left: 50%;
+        top: 88%;
+        transform: translate(-50%, -50%);
+        padding: 1%;
+        display: grid;
+        grid-template-rows: auto auto;
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+
+    #splash-contact p {
+        margin: 0;
+        padding: 0;
+        font-size: 1.1rem;
+    }
+
+    #splash-contact .contact-wrapper {
+        grid-row: 2;
+        align-self: end;
+        justify-self: end;
+        padding: 1%;
+    }
+
+    /*----------------------*/
+        /*Offers section*/
+    /*----------------------*/
+
+    .offer-card {
+        all: unset;
+    }
+
+    .offers {
+        height: 100vh;
+    }
+
+    .offers-text {
+        height: 10%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .offers-text h2{
+        padding: 1%;
+    }
+
+    .card-title-left, .card-title-right {
+        width: 55%;
+    }
+
+    .card-title-left h2, .card-title-right h2 {
+        padding: 3%;
+    }
+
+    .offer-card-wrapper {
+        display: grid;
+        margin: 0 auto;
+        width: 90%;
+        height: 85%;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 6%;
+        row-gap: 3%;
+    }
+
+    .offer-card-wrapper img {
+        width: 100%;
+    }
+
+    .offer-card {
+        position: relative;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+
+    /*----------------------*/
+    /*Landing page section 1*/
+    /*----------------------*/
+    
+    #splash-contact p {
+        font-size: 1.4rem;
+    }
+    
+    #landing .img-container img {
+        width: 100%;
+    }
+
+    #splash-contact .contact-wrapper a {
+        text-decoration: none;
+        font: var(--bold-body-font);
+        color: var(--dark);
+        animation-name: contact-p;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+    }
+    
+    #splash-contact .contact-wrapper:hover {
+        background-color: var(--dark);
+        a {
+            color: var(--white);
+            font-size: 1.5rem;
+            animation-name: contact-p;
+            animation-iteration-count: unset;
+        }
+    }
+
+    @keyframes contact-p {
+        0% {font-size: 1.3rem;}
+        50% {font-size: 1.5rem;}
+        100% {font-size: 1.3rem;}
+    }
+
+    /*----------------------*/
+        /*Offers section*/
+    /*----------------------*/
+
+    .offer-card-wrapper {
+        width: 75%;
+        column-gap: 10%;
+    }
+}
+

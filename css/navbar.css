@@ -1,0 +1,118 @@
+.selector {
+    visibility: hidden;
+}
+
+#home {
+    grid-area: home;
+}
+
+#about {
+    grid-area: about;
+}
+
+#shop {
+    grid-area: shop;
+}
+
+#commission {
+    grid-area: commission;
+}
+
+.nav .logo {
+    display: none;
+    color: var(--white);
+}
+
+.nav .logo p {
+    margin: 0;
+}
+
+nav {
+    box-shadow: 0px 3px 0 #BFBDBA;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--teal);
+}
+
+.nav {
+    display: grid;
+    justify-content: center;
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr); /* Adjust as needed */
+    grid-template-areas: 'home about shop commission';
+    font: var(--accent-font);
+    height: 9vh;
+}
+
+.nav-item-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.nav-item-wrapper a {
+    color: var(--white);
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s;
+}
+
+
+.nav a p{
+    margin: 0;
+}
+
+.nav-item-wrapper:hover {
+    border: 2px solid var(--white);
+    font-size: 1.8rem;
+    .selector {
+        visibility: visible;
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (min-width: 550px) {
+    .nav {
+        font-size: 1.8rem;
+    }
+
+}
+
+@media only screen and (min-width: 650px) {
+
+    .nav .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.6rem;
+    }
+
+    .nav {
+        grid-template-columns: 15% 15% 35% 13% 21%;
+        grid-template-areas: 'home about logo shop commission';
+        font-size: 1.6rem;
+    }
+
+    .nav-item-wrapper:hover  {
+        font-size: 1.9rem;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .nav {
+        font-size: 2rem;
+        grid-template-columns: fit-content(1fr) fit-content(1fr) fit-content(4fr) fit-content(1fr) fit-content(1fr);
+    }
+
+    .nav-item-wrapper:hover  {
+        font-size: 2.3rem;
+    }
+
+    .nav .logo {
+        font-size: 2rem;
+    }
+}
