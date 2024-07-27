@@ -154,7 +154,7 @@
 
 .card-title-left, .card-title-right {
     width: 50%;
-    top: 1%;
+    top: 0;
     z-index: 1;
     background-color: var(--green);
     color: var(--white);
