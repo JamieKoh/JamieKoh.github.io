@@ -197,7 +197,7 @@
 }
 
 .offer-card .img-container img {
-    width: 120%;
+    height: 120%;
     position: absolute;
     left: 50%;
     top: 50%;
