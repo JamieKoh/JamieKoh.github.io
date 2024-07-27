@@ -150,9 +150,11 @@
 .card-title-left, .card-desc-right, .card-title-right, .card-desc-left {
     position: absolute;
     margin: 0;
+
 }
 
 .card-title-left, .card-title-right {
+    box-sizing: border-box;
     width: 50%;
     top: 0;
     z-index: 1;
